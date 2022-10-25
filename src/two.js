@@ -23,6 +23,7 @@ import { Registry } from './registry.js';
 import { Shape } from './shape.js';
 import { Text } from './text.js';
 import { Vector } from './vector.js';
+import { ZUI } from './zui.js';
 
 // Effects
 
@@ -325,6 +326,7 @@ export default class Two {
   static Shape = Shape;
   static Text = Text;
   static Vector = Vector;
+  static ZUI = ZUI;
 
   static Gradient = Gradient;
   static ImageSequence = ImageSequence;
@@ -685,6 +687,12 @@ export default class Two {
 
     return circle;
 
+  }
+
+  // 生成 ZUI
+  makeZui(stage) {
+    const theZui = new ZUI(stage);
+    return theZui
   }
 
   /**
